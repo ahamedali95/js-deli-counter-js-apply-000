@@ -13,7 +13,7 @@ function takeANumber(katzDeliLine, name) {
   katzDeliLine.push(name);
   var position = katzDeliLine.indexOf(name) + 1;
 
-  return "Welcome, " + name + ". You are number " + position + " in line.";
+  return `Welcome, ${name}. You are number ${position} in line.`
 }
 
 /*Build a function nowServing. This function should return the first
@@ -23,13 +23,13 @@ waiting to be served!"*/
 
 function nowServing(katzDeliLine) {
   if (katzDeliLine.length === 0) {
-    return "There is nobody waiting to be served!";
+    return `There is nobody waiting to be served!`;
   }
 
   var personServing = katzDeliLine[0];
   katzDeliLine.shift();    //remove first element from the array
 
-  return "Currently serving " + personServing + ".";
+  return `Currently serving ${personServing}.`;
 }
 
 /*Build a function currentLine that returns the current line.
@@ -42,17 +42,17 @@ function currentLine(katzDeliLine) {
   var line = "";
 
   if (katzDeliLine.length === 0) {
-    return "The line is currently empty.";
+    return `The line is currently empty.`;
   }
 
   for (var i = 0; i < katzDeliLine.length; i++) {
     if (i === katzDeliLine.length - 1) {
-      line += i+1 + ". " + katzDeliLine[i];
+      line += `${i+1}. ${katzDeliLine[i]}`;
     } else {
-      line += i+1 + ". " + katzDeliLine[i] + ", ";
+      line += `${i+1}. ${katzDeliLine[i]}, `;
     }
 
   }
 
-  return "The line is currently: " + line;
+  return `The line is currently: ${line}`;
 }
